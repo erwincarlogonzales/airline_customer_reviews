@@ -8,7 +8,7 @@
 
 **[👉 Check out the Tableau Dashboard here](https://tinyl.co/3cLO)**
 
-**[👉 Check out the app here](https://elly-ml-app.streamlit.app/)**
+**[👉 Check out the app here](https://tinyl.co/3cLU)**
 
 ---
 
