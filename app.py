@@ -10,10 +10,15 @@ import config
 from src.preprocessing import create_preprocessing_pipeline
 from src.categorical_encoder import categorical_encoder
 
-# Define st_shap to embed SHAP plots in Streamlit
+# # Define st_shap to embed SHAP plots in Streamlit - not working
 # def st_shap(plot):
 #     shap_html = f"<head>{shap.getjs()}</head><body>{plot.html()}</body>"
 #     st.components.v1.html(shap_html)
+
+# Define st_shap to embed SHAP plots in Streamlit
+def st_shap(plot, height=None):
+    shap_html = f"<head>{shap.getjs()}</head><body>{plot.html()}</body>"
+    st.components.v1.html(shap_html, height=height)
     
 @st.cache_resource
 # Function to load models
@@ -116,19 +121,54 @@ st.write('### User Inputs')
 for key, value in input_df.loc[0].items():
     st.write(f'**{key}**: {value}')
     
+# # Predict button - working no SHAP
+# if st.button('Make Prediction ✨'):
+#     result, shap_values, expected_value, input_df_transformed, lime_explanation = make_predictions(
+#         selected_model, preprocessor, input_df, explainer, lime_explainer
+#     )
+#     if result:
+#         st.write(f'### Prediction: {result}')
+        
+#         # Display SHAP force plot
+#         # st.write('### SHAP Force Plot:')
+#         # st_shap(shap.force_plot(explainer.expected_value[0], shap_values[0], input_df_transformed[0]))
+        
+#         # Display LIME explanation
+#         st.write('### LIME Explanation:')
+#         lime_html = lime_explanation.as_html()
+#         st.components.v1.html(lime_html)
+        
 # Predict button
-if st.button('Make Prediction ✨'):
+if st.button('Analyze My Experience ✨'):
     result, shap_values, expected_value, input_df_transformed, lime_explanation = make_predictions(
         selected_model, preprocessor, input_df, explainer, lime_explainer
     )
     if result:
-        st.write(f'### Prediction: {result}')
+        st.write(f"## Prediction: You are likely **{result}**")
         
-        # Display SHAP force plot
-        # st.write('### SHAP Force Plot:')
-        # st_shap(shap.force_plot(explainer.expected_value[0], shap_values[0], input_df_transformed[0]))
+        st.write("---")
         
-        # Display LIME explanation
-        st.write('### LIME Explanation:')
-        lime_html = lime_explanation.as_html()
-        st.components.v1.html(lime_html)
+        col1, col2 = st.columns(2)
+
+        with col1:
+            # --- SHAP PLOT LOGIC ---
+            st.write('### What Drove This Prediction? (SHAP Analysis)')
+            st.info("This plot shows which features pushed the prediction higher (red) or lower (blue).", icon="💡")
+            
+            # Handle the case where expected_value can be a list (from LightGBM) or a single float (from sklearn DecisionTree)
+            if isinstance(expected_value, (list, np.ndarray)):
+                # If it's a list, we're interested in the base value for the "Not Satisfied" class (index 1)
+                base_value = expected_value[1]
+            else:
+                # If it's a single number, just use it
+                base_value = expected_value
+            
+            # Plot the first prediction's explanation
+            force_plot = shap.force_plot(base_value, shap_values[0,:], features=input_df.iloc[0,:])
+            st_shap(force_plot, 200)
+        
+        with col2:
+            st.write('### Top Factors (LIME Explanation)')
+            st.info("This chart shows the top features supporting or contradicting the prediction.", icon="💡")
+            lime_html = lime_explanation.as_html()
+            st.components.v1.html(lime_html, height=400)
