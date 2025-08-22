@@ -75,9 +75,39 @@ This application bridges the gap between complex machine learning predictions an
 - **Class Upgrade** directly impacts satisfaction scores (0.49 correlation)
 - **Service Quality Metrics** cluster together, indicating interconnected experience factors
 
+<div align="center">
+
+**Customer Satisfaction Correlation Analysis**
+![Feature Correlation Matrix](images/correlation_matrix.png)
+*Comprehensive correlation analysis revealing satisfaction drivers and feature relationships*
+
+</div>
+
 ---
 
 ## 🛠️ **Technical Excellence**
+
+### **Data Quality & Preprocessing Excellence**
+
+One of the critical challenges in customer satisfaction modeling is handling **class imbalance**. This project demonstrates advanced preprocessing techniques to ensure robust model performance.
+
+<div align="center">
+
+**Class Distribution Analysis**
+
+![Class Distribution Before SMOTE](images/before_smote.png)
+
+*Original dataset showing significant class imbalance*
+
+![Class Distribution After SMOTE](images/after_smote.png)
+*Balanced dataset after SMOTE preprocessing for optimal model training*
+
+</div>
+
+**Preprocessing Impact:**
+- **Before SMOTE**: Imbalanced distribution potentially biasing model predictions
+- **After SMOTE**: Perfectly balanced classes enabling unbiased learning
+- **Result**: Both models achieve strong performance across satisfaction categories
 
 ### **ML Pipeline Architecture**
 ```
@@ -128,6 +158,20 @@ Encoding       Pipeline          Training           Generation          Deployme
 
 **Key Business Insight**: Decision Tree's superior overall performance (86% accuracy) makes it ideal for operational deployment, while LightGBM's perfect satisfied customer recall makes it valuable for customer retention initiatives.
 
+#### **Performance Visualization**
+
+<div align="center">
+
+**LightGBM Confusion Matrix**
+![LightGBM Confusion Matrix](images/lightgbm_metrics.png)
+![LightGBM Confusion Matrix](images/lightgbm_metrics_testing.png)
+
+**Decision Tree Confusion Matrix** 
+![Decision Tree Confusion Matrix](images/decision_tree_metrics.png)
+![Decision Tree Confusion Matrix](images/decision_tree_metrics_testing.png)
+
+</div>
+
 #### **Confusion Matrix Insights**
 
 **Decision Tree Performance:**
@@ -147,6 +191,18 @@ Encoding       Pipeline          Training           Generation          Deployme
 - **LightGBM**: Emphasizes Age, WiFi, Flight Distance
 - **Decision Tree**: Prioritizes Online Boarding, WiFi, Business Travel
 - **Convergence**: Both models identify WiFi service as critical satisfaction factor
+
+<div align="center">
+
+**Feature Importance Comparison**
+
+![LightGBM Feature Importance](images/lightgbm_features.png)
+*LightGBM: Age, WiFi, and Flight Distance dominate predictions*
+
+![Decision Tree Feature Importance](images/decision_tree_features.png)  
+*Decision Tree: Online Boarding emerges as the primary satisfaction driver*
+
+</div>
 
 ---
 
