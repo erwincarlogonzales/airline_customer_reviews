@@ -4,6 +4,8 @@
 
 **A web application built with Streamlit that predicts airline customer satisfaction and explains the *why* behind each prediction using XAI.**
 
+**NOTE: THIS IS NOT AN OFFICIAL APP OR DASHBOARD!**
+
 </div>
 
 **[👉 Check out the Tableau dashboard here](https://public.tableau.com/app/profile/erwincarlogonzales/viz/Book5_17312434149340/Reviews)**
