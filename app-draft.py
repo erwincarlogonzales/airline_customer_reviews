@@ -120,7 +120,7 @@ def make_predictions(model, preprocessor, input_df, explainer, lime_explainer):
     
 # Display logo and hero image
 st.sidebar.image('images/logo.png', width = 100)
-st.image('images/hero.jpg', use_column_width = True)
+st.image('images/hero.jpg', use_container_width = True)
 
 st.title('Cebu Pacific Customer Flight Satisfaction ✈️')
 st.header('Please Tell Us About Your Experience! 🤩')
