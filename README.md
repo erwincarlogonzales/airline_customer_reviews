@@ -91,8 +91,6 @@ This application bridges the gap between complex machine learning predictions an
 
 One of the critical challenges in customer satisfaction modeling is handling **class imbalance**. This project demonstrates advanced preprocessing techniques to ensure robust model performance.
 
-<div align="center">
-
 **Class Distribution Analysis**
 
 ![Class Distribution Before SMOTE](images/before_smote.png)
@@ -242,7 +240,7 @@ airline-customer-satisfaction-predictor/
 ## 🚀 **Quick Start Guide**
 
 ### **Prerequisites**
-- **Python 3.8+** with Poetry dependency management
+- **Python 3.11+** with Poetry dependency management
 - **Git** for repository cloning
 
 ### **1. Repository Setup**
@@ -300,7 +298,7 @@ streamlit run app.py
 
 ---
 
-## 🎓 **Technical Achievements**
+## 🎓 **Technical Goals Achieved**
 
 ### **Machine Learning Excellence**
 - **Dual Model Implementation**: Balanced accuracy and interpretability approach
@@ -318,33 +316,11 @@ streamlit run app.py
 - **Modular Architecture**: Clean separation of concerns across components
 - **Configuration Management**: Centralized settings and path management
 - **Dependency Management**: Poetry-based reproducible environments
-- **Production Deployment**: Streamlit Cloud hosting with CI/CD integration
+- **Production Deployment**: Streamlit Cloud hosting
 
 ---
 
-## 🔮 **Future Enhancements**
-
-### **Model Improvements**
-- **Ensemble Methods**: Combine LightGBM and Decision Tree for hybrid predictions
-- **Deep Learning**: Neural network architectures for complex pattern recognition
-- **Online Learning**: Adaptive models that improve with real-time feedback
-- **Multi-objective Optimization**: Balance accuracy, fairness, and interpretability
-
-### **Feature Expansion**
-- **Text Analytics**: Incorporate customer review sentiment analysis
-- **Temporal Patterns**: Time-series analysis of satisfaction trends
-- **External Data**: Weather, delays, and operational data integration
-- **Demographic Insights**: Advanced customer segmentation and personalization
-
-### **Platform Development**
-- **API Development**: RESTful endpoints for system integration
-- **Mobile Application**: Native mobile interface for field usage
-- **Dashboard Analytics**: Executive-level reporting and KPI tracking
-- **A/B Testing Framework**: Experimental platform for intervention testing
-
----
-
-## 📊 **Data Science Impact**
+## 📊 **Data Science Implementation (with prototyping)**
 
 This project demonstrates comprehensive data science capabilities across the full ML lifecycle:
 
@@ -353,7 +329,7 @@ This project demonstrates comprehensive data science capabilities across the ful
 - Statistical validation of feature importance across multiple model types
 - Comprehensive evaluation methodology with multiple performance metrics
 
-**🛠️ Engineering Excellence:**
+**🛠️ Engineering and App Development:**
 - Production-ready code architecture with proper modularity
 - Robust preprocessing pipeline handling categorical and numerical features
 - Efficient model serialization and deployment strategies
@@ -367,24 +343,6 @@ This project demonstrates comprehensive data science capabilities across the ful
 - Real-world deployment demonstrating scalable ML solution architecture
 - User-friendly interface enabling widespread adoption across business functions
 - Comprehensive documentation supporting knowledge transfer and maintenance
-
----
-
-## 🤝 **Contributing & Collaboration**
-
-This project represents a foundation for advanced customer satisfaction analytics and is designed for extension and collaboration.
-
-**Areas for Contribution:**
-- Model performance optimization and new algorithm integration
-- Additional explainability frameworks and visualization improvements
-- Enhanced preprocessing pipelines for diverse data sources
-- Integration with airline operational systems and real-time data feeds
-
-**Research Applications:**
-- Customer experience optimization studies
-- AI explainability and interpretability research
-- Human-AI interaction design and usability analysis
-- Business intelligence and decision support system development
 
 ---
 
