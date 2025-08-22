@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='2.3-deployment-poetry',
+    name='airline_customer_reviews',
     version='1.0.0',
     packages=find_packages()
 )
