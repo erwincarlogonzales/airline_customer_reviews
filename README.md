@@ -6,9 +6,9 @@
 
 </div>
 
-**[👉 Check out the Tableau Dashboard here](https://public.tableau.com/app/profile/erwincarlogonzales/viz/Book5_17312434149340/Reviews)**
+**[👉 Check out the Tableau dashboard here](https://public.tableau.com/app/profile/erwincarlogonzales/viz/Book5_17312434149340/Reviews)**
 
-**[👉 Check out the app here](https://erwincarlogonzales-airline-customer-reviews-app-l8h2pd.streamlit.app/)**
+**[👉 Check out the Streamlit app here](https://erwincarlogonzales-airline-customer-reviews-app-l8h2pd.streamlit.app/)**
 
 ---
 
